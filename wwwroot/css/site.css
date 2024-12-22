@@ -1,0 +1,1251 @@
+/* Root and Global Styles */
+/* Apply animated custom cursor */
+/* Apply animated custom cursor */
+* {
+    cursor: url("https://downloads.totallyfreecursors.com/cursor_files/blackglitter.ani") 16 16, url("https://downloads.totallyfreecursors.com/thumbnails/blackglitter.gif"), auto;
+}
+
+
+a:hover {
+    cursor: url("https://downloads.totallyfreecursors.com/cursor_files/blackglitter.ani"), url("https://downloads.totallyfreecursors.com/thumbnails/blackglitter.gif"), auto;
+}
+
+html {
+    font-size: 14px;
+    position: relative;
+    min-height: 100%;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+/* Body Styles with Dark Background */
+body {
+    margin-bottom: 60px;
+    color: #f1f1f1;
+    font-family: "Merriweather Sans", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(135deg, #1a1a2e, #7fdfff);
+    background-size: cover, auto;
+    background-blend-mode: overlay;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Form Controls */
+.form-floating > .form-control-plaintext::placeholder,
+.form-floating > .form-control::placeholder {
+  color: var(--bs-secondary-color);
+  text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder,
+.form-floating > .form-control:focus::placeholder {
+  text-align: start;
+}
+
+
+/* Make the toggle button white */
+#toggle-btn {
+  background-color: #fff;  /* White background for the button */
+  border: 1px solid #fff;  /* White border */
+}
+
+/* Change the color of the hamburger icon to dark */
+#toggle-btn .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3E%3Cpath stroke='%2316213e' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 6h20M5 14h20M5 22h20'%3E%3C/path%3E%3C/svg%3E");  /* Custom dark icon */
+}
+
+/* Optional: Change hover effect to improve visibility */
+#toggle-btn:hover {
+  background-color: #f5f5f5; /* Light gray background when hovered */
+  border: 1px solid #f5f5f5;  /* Light gray border when hovered */
+}
+
+
+/* Default navbar background */
+header.sticky-top {
+    z-index: 1030;
+    margin-top: 20px;
+    position: sticky;
+    top: 0;
+    background-color: transparent;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, padding 0.3s ease-in-out; /* Added padding transition */
+    padding: 0px;
+    transition: ease-in-out 0.2s; /* Keeping this but applied earlier */
+}
+
+header.scrolled {
+    z-index: 1030;
+    margin-top: 20px;
+    position: sticky;
+    top: 0;
+    background-color: transparent;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, padding 0.3s ease-in-out; /* Added padding transition */
+    padding: 5px;
+    transition: ease-in-out 0.3s; /* Keeping this */
+}
+
+
+/* Add box-shadow to create a sticky effect */
+header.sticky-top::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(0, 0, 0, 0.33);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+/* When the header becomes sticky, change background color */
+header.sticky-top.sticky-active {
+  background-color: #16213e;
+  color: white;
+}
+
+header.sticky-top.sticky-active::after {
+  opacity: 1;
+}
+
+
+/* Navbar Styles */
+#navbar {
+  background: transparent;
+  color: #fff;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  border-radius: 0px;
+  background-image: url("https://www.transparenttextures.com/patterns/gplay.png");
+}
+
+.navbar-brand .logo {
+  max-height: 40px;
+  width: auto;
+}
+
+.navbar-brand span {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.navbar-brand {
+  font-family: "Satisfy", cursive;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.nav-item {
+  padding: 0.5rem 1rem;
+}
+
+.nav-link {
+  color: #fff;
+  font-family: "Merriweather Sans", sans-serif;
+  font-weight: 600;
+  transition: transform 0.3s ease;
+}
+
+.nav-link:hover {
+  transform: scale(1.1);
+  color: #d1d1d1;
+}
+
+@media (max-width: 767px) {
+  #navbar {
+    width: 100%;
+  }
+
+  .navbar-nav {
+    gap: 0.5rem;
+  }
+}
+
+/* Glass Effect */
+.glass-effect {
+  background: rgb(255, 255, 255, 0.76);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(11.9px);
+  -webkit-backdrop-filter: blur(11.9px);
+  border: 1px solid rgba(255, 255, 255, 0.69);
+}
+
+
+/* Hero Section */
+.hero {
+    position: relative;
+    background: rgba(0, 0, 0, 0.1);
+    padding: 6rem 3rem;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 4px 12px 0px;
+    backdrop-filter: blur(8.6px);
+    -webkit-backdrop-filter: blur(8.6px);
+    border: 1px solid rgba(255, 255, 255, 0.69);
+    background-image: url("https://www.transparenttextures.com/patterns/gplay.png");
+}
+
+#hero-title {
+  font-size: 5rem;
+  font-weight: 700;
+  font-family: 'Satisfy', cursive;
+  color: #f1f1f1;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
+}
+
+#hero-description {
+  font-size: 2.5rem;
+  color: #dbe2e8;
+  font-weight: 600;
+  margin-bottom: 30px;
+  line-height: 1.4;
+}
+
+.cursor {
+  font-size: 3rem;
+  animation: blink 0.6s infinite;
+  color: #f1f1f1;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+@media (max-width: 767px) {
+  /* Mobile Hero Section */
+  .hero {
+    padding: 4rem 2rem;
+  }
+
+  #hero-title {
+    font-size: 3rem; /* Reduced title size for mobile */
+    text-align: center;
+  }
+
+  #hero-description {
+    font-size: 1.5rem; /* Reduced description size for mobile */
+    text-align: center;
+  }
+
+  .cursor {
+    font-size: 2rem; /* Reduced cursor size for mobile */
+  }
+}
+
+/* Portrait Styling */
+.portrait-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.portrait-container:hover {
+  transform: scale(1.05);
+}
+
+#portrait {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.portrait-container:hover #portrait {
+  transform: scale(1.1);
+}
+
+.portrait-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 12px;
+}
+
+.portrait-container:hover .portrait-overlay {
+  opacity: 1;
+}
+
+.portrait-overlay-text {
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 1rem;
+}
+
+@media (max-width: 767px) {
+  /* Mobile Portrait Section */
+  .portrait-container {
+    width: 100%;
+    max-width: 300px; /* Limit portrait size on mobile */
+    margin: 0 auto; /* Center the portrait */
+  }
+
+  #portrait {
+    object-fit: contain; /* Adjust the portrait fit for smaller screens */
+  }
+
+  .portrait-overlay-text {
+    font-size: 1.5rem; /* Smaller text size for mobile */
+    padding: 0.5rem;
+  }
+}
+
+/* Button Styles */
+.btn {
+  padding: 12px 32px;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  border-radius: 5px;
+  font-weight: 600;
+  text-align: center;
+  transition: all .3s ease;
+}
+
+.button-23 {
+  background-color: #1e1e1eff; /* Unique background color */
+  border: 2px solid #1e1e1eff;
+  border-radius: 0px;
+  color: #fff;
+  cursor: pointer;
+  padding: 12px 28px;
+  font-size: 1.1rem;
+  transition: all .3s ease;
+}
+
+.button-23:hover {
+  background-color: #1e1e1eff; /* Hover color */
+  border-color: #1e1e1eff;
+  transform: translateY(-2px)!important;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.button-23:active {
+  background-color: #0f0f1d; /* Active color */
+  transform: translateY(2px);
+}
+
+.button-23:disabled {
+  background-color: #dddddd;
+  border-color: #bbbbbb;
+  color: #999999;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.button-31 {
+  background-color: #ffff; /* Unique background color for button-31 */
+  border-radius: 0px;
+  color: #000;
+  cursor: pointer;
+  padding: 12px 28px; /* Similar padding for both */
+  font-size: 1.1rem;
+  transition: all .3s ease;
+}
+
+.button-31:hover {
+  background-color: #ffff; /* Hover color for button-31 */
+  transform: translateY(-2px)!important;
+  color: #000;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.button-31:active {
+  background-color: #0f0f1d; /* Active color for button-31 */
+  transform: translateY(2px);
+}
+
+/* Mobile Button Styles */
+@media (max-width: 767px) {
+  .button-23, .button-31 {
+    width: 180px; /* Slightly reduced width on mobile */
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+}
+
+
+/* About Section and Skills Section container */
+#about-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+  color: #f5f5f5;
+  backdrop-filter: blur(10px);
+  height: 100%;
+  background-image: url("https://www.transparenttextures.com/patterns/gplay.png");
+}
+
+@media (max-width: 767px) {
+  #about-skills {
+    flex-direction: column; /* Stack sections on smaller screens */
+    align-items: center;
+  }
+}
+
+/* Section Title */
+.section-title {
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #f5f5f5;
+  margin-bottom: 1rem;
+}
+
+/* Section Description */
+.section-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #e0e0e0;
+  margin-bottom: 2rem;
+}
+
+/* Skills Section */
+.skills-section {
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.69);
+}
+
+@media (max-width: 768px) {
+  .skills-section {
+    padding: 20px;
+    flex: 1 1 100%; /* Allow skills section to take full width on smaller screens */
+  }
+}
+
+/* About Section */
+.about-section {
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.69);
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    padding: 20px;
+    flex: 1 1 100%; /* Allow about section to take full width on smaller screens */
+  }
+}
+
+/* Skill Category */
+.skill-category {
+  margin-bottom: 30px;
+}
+
+.category-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* Skills Grid Layout */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .skills-grid {
+    flex-direction: column; /* Stack skills vertically on smaller screens */
+    align-items: center;
+  }
+}
+
+/* Individual Skill Item */
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+  width: 150px;
+  text-align: center;
+  position: relative;
+  overflow: hidden; /* Prevent pseudo-element overflow */
+}
+
+.skill-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(255, 255, 255, 0.90); /* Filling background */
+  transform: scaleY(0); /* Start with 0 width */
+  transform-origin: bottom; /* Fill from left to right */
+  transition: transform 0.2s ease-in-out;
+  z-index: 0; /* Place it behind the content */
+}
+
+.skill-item:hover::before {
+  transform: scaleY(1); /* Expand to full width on hover */
+}
+
+.skill-item:hover {
+  transform: translateY(-10px);
+}
+
+.skill-item i {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #fff;
+  position: relative; /* To stay above the pseudo-element */
+  z-index: 1; /* Ensure it is above the background */
+}
+
+.skill-item:hover i{
+    color:#575757;
+}
+
+.skill-item p {
+  font-size: 1rem;
+  color: #fff;
+  position: relative; /* To stay above the pseudo-element */
+  z-index: 1; /* Ensure it is above the background */
+}
+
+.skill-item:hover p{
+    color:#575757;
+}
+
+@media (max-width: 768px) {
+  .skill-item {
+    width: 100%; /* Make skill items responsive */
+    max-width: 200px; /* Set a max-width for better alignment */
+    padding: 15px; /* Reduce padding for smaller screens */
+  }
+}
+
+
+
+/* About Me PAge Section */
+.about-me-section {
+    color: #fff;
+    padding: 80px 30px; /* Increased padding for better balance */
+    margin: 1rem auto 3rem auto; /* Adjusted margins for more space */
+    background: rgba(0, 0, 0, 0.1);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 4px 12px 0px;
+    backdrop-filter: blur(8.6px);
+    -webkit-backdrop-filter: blur(8.6px);
+    border: 1px solid rgba(255, 255, 255, 0.69);
+    background-image: url("https://www.transparenttextures.com/patterns/gplay.png");
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Profile Image */
+.profile-image-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5); /* Improved shadow for a more professional look */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-image-wrapper:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6); /* Enhanced hover effect */
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 2px solid #00bcd4; /* Thin border to make the profile image pop */
+}
+
+/* Section Titles */
+.aboutme-section-title,
+.skills-title,
+.hobbies-title,
+.timeline-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Text Styling */
+.lead-text {
+    font-size: 1.25rem;
+    font-weight: 300;
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+.body-text {
+    font-size: 1rem;
+    line-height: 1.8;
+    font-weight: 300;
+    margin-bottom: 15px;
+    color: #ddd; /* Slightly lighter text for readability */
+}
+
+/* Key Skills Section */
+.key-skills-section {
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Subtle shadow for a more refined look */
+    border: 1px solid rgba(255, 255, 255, 0.69);
+    margin-bottom: 3rem;
+    padding: 40px 20px; /* Added padding for better spacing */
+    background-image: url("https://www.transparenttextures.com/patterns/gplay.png");
+}
+
+/* Skill Cards */
+.key-skills-section .skill-card {
+    background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png");
+    backdrop-filter: blur(10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.69);
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+key-skills-section .skill-card:hover {
+    transform: translateY(-5px); /* Slight hover effect */
+}
+
+.progress-container {
+    position: relative;
+    height: 25px;
+    background-color: #a9a9a9;
+    border-radius: 20px;
+    overflow: hidden;
+    color: #000;
+    margin-top: 1rem;
+}
+
+.progress-bar-wrapper {
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    border-radius: 20px;
+    transition: width 0.8s ease;
+    background: #00bcd4 !important; /* Progress bars in the same accent color */
+}
+
+.percentage {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: bold;
+    color: #000;
+    z-index: 10;
+}
+
+/* Hobbies Section */
+.hobbies-list {
+    text-align: center;
+    padding: 0;
+    list-style: none;
+}
+
+.hobbies-section {
+    background: rgba(0, 0, 0, 0.1);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 4px 12px 0px;
+    backdrop-filter: blur(8.6px);
+    -webkit-backdrop-filter: blur(8.6px);
+    border: 1px solid rgba(255, 255, 255, 0.69);
+    background-image: url("https://www.transparenttextures.com/patterns/gplay.png");
+    padding: 2rem;
+}
+
+.hobby-item {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 15px 20px;
+    position: relative;
+    padding: 10px 2rem;
+    background: rgb(101, 101, 101, 0.50); /* Glass effect */
+    border:1px solid rgba(255, 255, 255, 0.69);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hobby-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Subtle hover shadow */
+}
+
+.hobby-icon {
+    font-size: 2rem;
+    color: #fff;
+    margin-right: 10px;
+}
+
+#my-journey {
+    background: rgba(0, 0, 0, 0.1);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 4px 12px 0px;
+    backdrop-filter: blur(8.6px);
+    -webkit-backdrop-filter: blur(8.6px);
+    border: 1px solid rgba(255, 255, 255, 0.69);
+    background-image: url("https://www.transparenttextures.com/patterns/gplay.png");
+    margin-bottom:3rem;
+}
+
+/* The actual timeline (the vertical ruler) */
+.main-timeline-5 {
+    position: relative;
+    max-width: 50%;
+    margin: 0 auto;
+    z-index: 0;
+}
+
+/* The actual timeline (the vertical ruler) */
+.main-timeline-5::after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  background-color: #fff;
+  top: 0;
+  bottom: 0;
+  left: auto;
+  margin-left: -3px;
+  z-index: 0;
+}
+
+/* Container around content */
+.timeline-5 {
+  position: relative;
+  background-color: inherit;
+  width: 100%;
+}
+
+/* The circles on the timeline */
+.timeline-5::after {
+  content: "";
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  right: 1px;
+  background-color: #ffffffa0;
+  top: 18px;
+  border-radius: 50%;
+  z-index: 1;
+}
+/* Hover effect for the circle */
+.timeline-5:hover::after {
+    transform: scale(1.2);
+    background-color: #00bcd4; /* Change to your desired color */
+}
+    .timeline-5 .card {
+        background: #ececec72;
+        background-image: url("https://www.transparenttextures.com/patterns/60-lines.png");
+        color: #fff;
+    }
+
+.timeline-5 .card:hover {
+    transform: translateY(-5px);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 8px 16px;
+}
+
+/* Hovering the card changes the circle on the timeline */
+.timeline-5:hover .card:hover + .timeline-5::after {
+    background-color: #f39c12; /* Example color for hover effect */
+}
+
+
+/* Place the container to the right */
+.right-5 {
+  padding: 0px 0px 20px 40px;
+  left: auto;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right-5::before {
+  content: " ";
+  position: absolute;
+  top: 18px;
+  z-index: 1;
+  left: 30px;
+  border: medium solid #fff;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #fff transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right-5::after {
+  left: -10px;
+}
+
+@media (max-width: 991px) {
+  .main-timeline-5 {
+    max-width: 100%;
+  }
+}
+.gradient-custom-5 {
+  /* fallback for old browsers */
+  background: #ebbba7;
+
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(
+    to right,
+    rgba(235, 187, 167, 1),
+    rgba(207, 199, 248, 1)
+  );
+
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(
+    to right,
+    rgba(235, 187, 167, 1),
+    rgba(207, 199, 248, 1)
+  );
+}
+
+/* Projects Section */
+.projects {
+  padding: 5rem;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.69);
+  margin-bottom: 3rem;
+  background-image: url("https://www.transparenttextures.com/patterns/gplay.png");
+}
+
+/* Project Cards */
+.project-card {
+  background: rgba(255, 255, 255, 0.20);
+  padding: 20px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  z-index: 1; /* Ensure content is above ::before */
+}
+
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.90); /* Filling background */
+  transform: scaleY(0); /* Start with 0 height */
+  transform-origin: bottom; /* Fill from bottom to top */
+  transition: transform 0.4s ease-in-out; /* Slightly longer for smoother effect */
+  z-index: 0; /* Place it behind the content */
+}
+
+.project-card:hover::before {
+  transform: scaleY(1); /* Expand to full height on hover */
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.project-card img {
+  max-width: 150px;
+  margin: 0 auto;
+  object-fit: cover;
+  position: relative; /* Ensure above ::before */
+  z-index: 1;
+}
+
+.project-card h3 {
+  margin-top: 1rem;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  position: relative; /* Ensure above ::before */
+  z-index: 1;
+}
+
+.project-card p {
+  color: #e0e0e0;
+  margin: 1rem 0;
+  position: relative; /* Ensure above ::before */
+  z-index: 1;
+}
+
+.project-card:hover h3,
+.project-card:hover p {
+  color: #000; /* Works with adjusted ::before background */
+}
+
+
+.project-card .btn.button-23 {
+  background-color: #f5f5f5;
+  color: #000;
+  border-radius:0;
+  padding: 0.25rem 2rem;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.project-card:hover .btn.button-23{
+  z-index: 1;
+}
+
+.project-card .btn.button-23:hover {
+  background-color: #1e1e1eff;
+  color:#fff;
+}
+
+/* View All Projects Button */
+.allproj {
+  background-color: #fff;
+  border-radius:0;
+  transition: ease-in-out 0.5s;
+}
+
+.allproj:hover {
+  transform: scale(1.05);
+}
+
+/* Mobile Adjustments */
+@media (max-width: 767px) {
+  .project-card {
+    padding: 15px;
+    margin-bottom: 1.5rem;
+  }
+
+  .project-card img {
+    max-width: 100px;
+  }
+
+  .project-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .project-card p {
+    font-size: 0.9rem;
+  }
+
+  .project-card .btn.button-23 {
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+/*Project Page*/
+
+.intro-section {
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    padding: 2rem 1rem;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.69);
+    background-image: url("https://www.transparenttextures.com/patterns/gplay.png");
+    font-family: "Merriweather Sans", sans-serif;
+}
+
+#search-project {
+    border-radius: 0px;
+    margin-right: auto;
+    width: 32%;
+    text-align: center;
+    font-family: "Merriweather Sans", sans-serif;
+    cursor: text;
+    background:#ffffffa9;
+}
+
+
+.my-project-card {
+    background: #dbdbdb;
+    border: 1px solid #333;
+    border-radius: 0px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-family: "Merriweather Sans", sans-serif;
+    position: relative;
+}
+
+    .my-project-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .my-project-card img {
+        max-height: 180px;
+        margin: 0 auto;
+        width: 100%;
+        object-fit: cover;
+        position: relative; /* Ensure above ::before */
+    }
+    .my-project-card .card-body {
+        padding: 1.5rem;
+        border-top: 1px solid #333;
+    }
+
+    .my-project-card .card-title {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color:#000;
+        margin-bottom: 0.7rem;
+    }
+
+    .my-project-card .card-text {
+        font-size: 0.95rem;
+        color: #000;
+        margin-bottom: 1rem;
+    }
+
+    .my-project-card .btn-custom {
+        background-color: #fff;
+        color: #000;
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius:0px;
+    }
+
+        .my-project-card .btn-custom:hover {
+            background-color: #00bcd4;
+        }
+
+.btn-group{
+    margin-top:1.5rem;
+    
+}
+.btn-group .btn{
+    background:rgb(0, 0, 0, 0.32);
+    color:#fff;
+    border-radius:0px;
+    border: 1px solid rgba(255, 255, 255, 0.69);
+}
+.animated-btn-group button {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.animated-btn-group button:hover {
+    transform: scale(1.1);
+    background-color: #16213e; /* Use your accent color */
+    color: #fff;
+}
+
+.btn-group .btn:hover {
+    background: rgb(9, 9, 9, 0.93);
+}
+
+.btn-group button {
+    font-size: 0.9rem;
+    padding: 0.5rem 1.2rem;
+}
+
+/*contact page*/
+#contact {
+    margin-top:1rem;
+    margin-bottom:3rem;
+    color: #fff;
+    padding: 60px 0;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.69);
+    background-image: url("https://www.transparenttextures.com/patterns/gplay.png");
+}
+
+.contact-section h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group input, textarea{
+    cursor:text;
+}
+
+.contact-section p {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.cta-btn {
+  background-color: #16213e;
+  color: white;
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.cta-btn:hover {
+  background-color: #1a1a2e;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.social-links a {
+  margin: 0 15px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.social-links .linkedin{
+    background:#06216a;
+}
+.social-links .github{
+    background:#333;
+}
+
+.social-links a:hover {
+    color: #fdfdfd;
+    transform:scale(1.09);
+}
+
+/*resume page*/
+#resume_page {
+    margin-top:1rem;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.69);
+    background-image: url("https://www.transparenttextures.com/patterns/gplay.png");
+}
+
+
+/* Footer Styles */
+footer {
+    background: linear-gradient(135deg, #1a1a2e, #16213e); /* Dark gradient */
+    padding: 20px 0; /* Add more padding for a spacious feel */
+    color: #f5f5f5; /* Light text for contrast */
+    font-family: "Merriweather Sans", sans-serif;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+footer .footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  text-align: center; /* Center text within footer-content */
+}
+
+footer p {
+  font-size: 1.2rem;
+  color: #f5f5f5;
+  margin: 0;
+}
+
+footer .footer-link {
+  font-size: 1.1rem;
+  color: #007bff; /* Accent color for links */
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+footer .footer-link:hover {
+  color: #f8f9fa; /* Lighter hover effect */
+  text-decoration: underline;
+  transform: scale(1.05);
+}
+
+footer .footer-content a {
+  margin-left: 20px;
+}
+
+/* Adjust for small screens */
+footer .footer-content p {
+  margin-bottom: 10px; /* Add bottom margin for spacing */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  footer .footer-content {
+    flex-direction: column; /* Stack items on smaller screens */
+    gap: 15px; /* Adjust spacing for stacked layout */
+  }
+
+  footer p {
+    margin-bottom: 10px; /* Adjust spacing for small screens */
+  }
+
+  footer .footer-link {
+    font-size: 1rem; /* Slightly smaller font size for better readability */
+  }
+}
+
+@media (max-width: 480px) {
+  footer {
+    padding: 15px 0; /* Reduce padding for very small screens */
+  }
+
+  footer p {
+    font-size: 1rem; /* Smaller font size on very small screens */
+  }
+}
+

@@ -1,0 +1,59 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml"; // Specify the layout page
+}
+        
+<section class="container intro-section">
+    <h2>Explore My Work</h2>
+    <p>Here are some of the projects I've worked on, showcasing my skills and creativity.</p>
+    <!-- Projects Section -->
+    <div id="my-project-lists" class="container py-5">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <input id="search-project" type="text" class="form-control" placeholder="Search Projects">
+            <div class="btn-group animated-btn-group">
+                <button class="btn btn-custom">All</button>
+                <button class="btn btn-custom">E-Commerce</button>
+                <button class="btn btn-custom">Web Application</button>
+                <button class="btn btn-custom">Frontend</button>
+                <button class="btn btn-custom">Backend</button>
+                <button class="btn btn-custom">UI/UX Design</button>
+                <button class="btn btn-custom">Full-Stack Projects</button>
+            </div>
+        </div>
+        <div class="row g-4">
+            <!-- Project Card -->
+            <div class="col-md-4">
+                <div class="card my-project-card">
+                    <img src="~/img/projects/website-projoect.jpg" class="card-img-top" alt="Project Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Project Title</h5>
+                        <p class="card-text">Brief description of the project goes here. Highlight key features or impact.</p>
+                        <a href="#" class="btn btn-custom">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card my-project-card">
+                    <img src="~/img/projects/frontend.jpg" class="card-img-top" alt="Project Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Project Title</h5>
+                        <p class="card-text">Brief description of the project goes here. Highlight key features or impact.</p>
+                        <a href="#" class="btn btn-custom">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card my-project-card">
+                    <img src="~/img/projects/backend.jpg" class="card-img-top" alt="Project Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Project Title</h5>
+                        <p class="card-text">Brief description of the project goes here. Highlight key features or impact.</p>
+                        <a href="#" class="btn btn-custom">View Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Repeat similar cards for other projects -->
+        </div>
+    </div>
+</section>
+
