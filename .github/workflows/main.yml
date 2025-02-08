@@ -3,7 +3,7 @@ name: ci
 on:
   push:
     branches:
-      - master  # Ensures the workflow runs on the 'master' branch
+      - master  # Runs only on master
 
 jobs:
   build-windows:
@@ -20,13 +20,13 @@ jobs:
 
       - name: Build Windows Container
         run: |
-          docker build -t ${{ vars.DOCKER_USERNAME }}/${{ github.event.repository.name }}:windows-latest .
-          docker tag ${{ vars.DOCKER_USERNAME }}/${{ github.event.repository.name }}:windows-latest ${{ vars.DOCKER_USERNAME }}/${{ github.event.repository.name }}:latest
+          docker build -t varmashankar/portfolio:windows-latest .
+          docker tag varmashankar/portfolio:windows-latest varmashankar/portfolio:latest
 
       - name: Push Windows Container
         run: |
-          docker push ${{ vars.DOCKER_USERNAME }}/${{ github.event.repository.name }}:windows-latest
-          docker push ${{ vars.DOCKER_USERNAME }}/${{ github.event.repository.name }}:latest
+          docker push varmashankar/portfolio:windows-latest
+          docker push varmashankar/portfolio:latest
 
   build-linux:
     runs-on: ubuntu-latest
@@ -52,5 +52,5 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            ${{ vars.DOCKER_USERNAME }}/${{ github.event.repository.name }}:linux-latest
-            ${{ vars.DOCKER_USERNAME }}/${{ github.event.repository.name }}:latest
+            varmashankar/portfolio:linux-latest
+            varmashankar/portfolio:latest
