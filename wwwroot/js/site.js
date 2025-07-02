@@ -1,4 +1,14 @@
-﻿//header style change on scroll
+﻿// Initializing All Animations
+window.onload = () => {
+    modernProfessionalGradientAnimation();
+    navAnimation();
+    logoAnimation();
+    brandNameAnimation();
+    heroSectionAnimation();
+    typingEffect();
+};
+
+//header style change on scroll
 
 const header = document.querySelector("#header");
 const navbar = document.querySelector("#navbar");
@@ -77,7 +87,7 @@ function modernProfessionalGradientAnimation() {
         onUpdate: function () {
             document.body.style.background = `
                 linear-gradient(135deg,
-                    ${gradientColors.color1} 0%,
+                    ${gradientColors.color1} 10%,
                     ${gradientColors.color2} 33%,
                     ${gradientColors.color3} 66%,
                     ${gradientColors.color4} 100%
@@ -97,7 +107,7 @@ function modernProfessionalGradientAnimation() {
         onUpdate: function () {
             document.body.style.background = `
                 linear-gradient(${position.angle}deg,
-                    ${gradientColors.color1} 0%,
+                    ${gradientColors.color1} 10%,
                     ${gradientColors.color2} 33%,
                     ${gradientColors.color3} 66%,
                     ${gradientColors.color4} 100%
@@ -249,17 +259,6 @@ function typingEffect() {
 
     typeText();
 }
-
-// Initializing All Animations
-window.onload = () => {
-    modernProfessionalGradientAnimation();
-    navAnimation();
-    logoAnimation();
-    brandNameAnimation();
-    heroSectionAnimation();
-    typingEffect();
-};
-
 
 // GSAP Animation for images on hover using class
 const images = document.querySelectorAll(".project-img");
